@@ -1,0 +1,15 @@
+Cx = 50; 
+Cy = 50;
+Radius = 20; 
+
+A = zeros(100,100);  % Initialize the matrix to all zeros 
+
+for i = 1:100
+    for j = 1:100
+        if sqrt((Cx - i)^2 + (Cy - j)^2) <= Radius
+            A(i, j) = 255; % Set pixel to white if within the radius
+        end
+    end
+end
+
+imshow(A); % Display the result
